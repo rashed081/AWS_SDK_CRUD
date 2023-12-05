@@ -1,0 +1,28 @@
+﻿@model List<S3File>
+
+<h2>Files in S3 Bucket</h2>
+
+<div>
+    <a class="btn btn-primary" href="@Url.Action("UploadFile", "S3")">Upload File</a>
+</div>
+
+<table id="fileTable" class="table">
+    <thead>
+        <tr>
+            <th>File Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var file in Model)
+        {
+            <tr>
+                <td>@file.FileName</td>
+                <td>
+                    <button class="btn btn-primary" onclick="location.href='@Url.Action("DownloadFile", new { objectKey = file.FileName })'">Download</button>
+                    <button class="btn btn-danger" onclick="location.href='@Url.Action("DeleteFile", new { objectKey = file.FileName })'">Delete</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

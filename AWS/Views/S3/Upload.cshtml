@@ -1,0 +1,8 @@
+﻿@model S3File
+<form asp-controller="S3" asp-action="UploadFile" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="file">Select a file to upload:</label>
+        <input type="file" name="file" id="file" />
+    </div>
+    <button type="submit" class="btn btn-primary">Upload File</button>
+</form>

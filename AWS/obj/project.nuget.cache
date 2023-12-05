@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "vP/+5Ed+j4Wz2f5fYQVWyXRGttYQwdumR3OVURWjz4LCbqw3XYDhAYDNy6Ra2/N0jRvEST889bTTzFiUOqxVZw==",
+  "success": true,
+  "projectFilePath": "E:\\ASP.NET\\Repositories\\Assignment\\AWS\\AWS\\AWS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\roni\\.nuget\\packages\\awssdk.core\\3.7.204.6\\awssdk.core.3.7.204.6.nupkg.sha512",
+    "C:\\Users\\roni\\.nuget\\packages\\awssdk.dynamodbv2\\3.7.203.7\\awssdk.dynamodbv2.3.7.203.7.nupkg.sha512",
+    "C:\\Users\\roni\\.nuget\\packages\\awssdk.s3\\3.7.205.15\\awssdk.s3.3.7.205.15.nupkg.sha512",
+    "C:\\Users\\roni\\.nuget\\packages\\awssdk.sqs\\3.7.200.60\\awssdk.sqs.3.7.200.60.nupkg.sha512"
+  ],
+  "logs": []
+}

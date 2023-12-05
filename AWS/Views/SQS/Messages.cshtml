@@ -1,0 +1,31 @@
+﻿@model MessagesViewModel
+
+@{
+    ViewBag.Title = "Messages";
+}
+@using (Html.BeginForm("AddMessage", "SQS", FormMethod.Post))
+{
+    <div>
+        @Html.TextBox("newMessage", null, new { placeholder = "Enter a new message" })
+        <input type="submit" value="Add Message" class="btn btn-primary" />
+    </div>
+}
+
+
+
+<p>Approximate number of messages in the queue: @Model.MessageCount</p>
+
+@using (Html.BeginForm("DeleteMessages", "SQS", FormMethod.Post))
+{
+    for (var i = 0; i < Math.Min(Model.Messages.Count, 10); i++)
+    {
+        <label>
+            @Html.CheckBox("receiptHandles", false, new { value = Model.ReceiptHandles[i] }) @Model.Messages[i]
+        </label>
+        <br />
+    }
+
+    <input type="submit" value="Delete Selected Messages" class="btn btn-danger mt-3" />
+}
+
+
